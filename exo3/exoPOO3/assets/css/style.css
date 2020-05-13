@@ -1,0 +1,43 @@
+body {
+  width: auto;
+  text-align: center;
+}
+
+body #modifName {
+  background-color: burlywood;
+}
+
+#modifMail {
+  background-color: blue;
+}
+
+#modifName {
+  background-color: violet;
+}
+
+.register,
+.login {
+  padding: 20px;
+  margin: 40px;
+  width: 50%;
+  height: 250px;
+  background-color: goldenrod;
+  margin: auto;
+}
+
+label {
+  margin: 4px;
+  color: rgba(14, 54, 21, 0.973);
+  font-weight: bold;
+  width: 90px;
+}
+
+input[type='text'],
+input[type='email'] {
+  width: 180px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border: 1px solid #193d19;
+  height: 50px;
+}
+/*# sourceMappingURL=style.css.map */

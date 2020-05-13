@@ -1,0 +1,58 @@
+body{
+    width:auto;
+    text-align: center;
+
+    #modifName{
+        background-color: burlywood;
+    }
+}
+
+#modifMail{
+    background-color: blue;
+}
+// form{
+//     background-color: rgb(87, 58, 87);
+    
+// }
+// form p{    
+//     color: rgb(73, 2, 2);
+//     font-weight: bold;
+//     }
+    
+
+#modifName{
+    background-color: violet;
+}
+
+
+.register ,
+.login {
+    
+    padding: 20px;
+    margin: 40px;
+    width: 50%;
+    height: 250px;
+    background-color: goldenrod;
+    margin: auto;
+
+}
+
+label{
+    margin: 4px;
+    color: rgba(14, 54, 21, 0.973);
+    font-weight: bold;
+    width:90px;
+}
+
+input[type='text'],
+    input[type='email']{
+        
+        width:180px;
+        margin:5px;
+        background-color: whitesmoke;
+        border:1px solid rgb(25, 61, 25);
+        height:50px;
+    }
+
+
+
