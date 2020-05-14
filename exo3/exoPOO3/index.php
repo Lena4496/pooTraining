@@ -1,46 +1,50 @@
 <?php
 
-    require('classUser.php');
+    include 'classConnect.php';
+    include 'classUser.php';
+    include 'viewusers.inc.php';
 
-    require('classConnect.php');
+    // require('classUser.php');
 
-    session_start();
+    // require('classConnect.php');
 
-    $bdd=Database::connection();
+    // session_start();
 
-    $user= new User();
+    // $bdd=Database::connection();
+
+    // $user= new User();
 
 
-    if(isset($_POST['inscription'])){
-        $reponse= $user->validation($_POST);
-        echo "Votre inscription est réussie !";
-    }
+    // if(isset($_POST['inscription'])){
+    //     $reponse= $user->validation($_POST);
+    //     echo "Votre inscription est réussie !";
+    // }
 
-    if(isset($_POST['connexion'])){
-        $result = $user->connectUser($_POST);
-    }
+    // if(isset($_POST['connexion'])){
+    //     $result = $user->connectUser($_POST);
+    // }
     
-    if ( isset($_POST['editName']) ) {
-        $isUser=true;
-        $isMail=false;
-        $change= $user->editUser($bdd,$isMail,$isUser,$_SESSION['userId']);
-    }
+    // if ( isset($_POST['editName']) ) {
+    //     $isUser=true;
+    //     $isMail=false;
+    //     $change= $user->editUser($bdd,$isMail,$isUser,$_SESSION['userId']);
+    // }
 
-    if ( isset($_POST['editMail']) ) {
-        $isUser=false;
-        $isMail=true;
-        $change= $user->editUser($bdd,$isMail,$isUser,$_SESSION['userId']);
-    }
+    // if ( isset($_POST['editMail']) ) {
+    //     $isUser=false;
+    //     $isMail=true;
+    //     $change= $user->editUser($bdd,$isMail,$isUser,$_SESSION['userId']);
+    // }
 
-    if ( isset($_POST['deleteUser'])){
+    // if ( isset($_POST['deleteUser'])){
 
-        $delete = $user->deleteUser($bdd,$_SESSION['userId']);    
-        if($delete){ echo"Utilisateur supprimé";}  
-    }
+    //     $delete = $user->deleteUser($bdd,$_SESSION['userId']);    
+    //     if($delete){ echo"Utilisateur supprimé";}  
+    // }
 
-    if ( isset($_POST['disconect']) ){
-        $disco= $user->deconnectUser($bdd,$_SESSION['userId']);    
-    }
+    // if ( isset($_POST['disconect']) ){
+    //     $disco= $user->deconnectUser($bdd,$_SESSION['userId']);    
+    // }
 
     ?>
 
@@ -54,6 +58,12 @@
     </head>
     <body>
 
+        <?php 
+            $users = new ViewUser();
+            $users->showAllUsers();
+        
+        ?>
+<!-- 
         <div id="ModifMail">
             <form action='' method='POST'>
                 <label>Nouvel email</label>
@@ -114,7 +124,7 @@
                 <input type="submit" name="inscription" value="register">
             </form>
             
-        </div>
+        </div> -->
 
     </body>
 </html>
